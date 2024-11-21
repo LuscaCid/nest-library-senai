@@ -1,0 +1,47 @@
+{
+    "alunos": [
+      {
+        "id": 1,
+        "nome": "João Silva",
+        "idade": 20,
+        "curso": "Engenharia"
+      },
+      {
+        "id": 2,
+        "nome": "Maria Oliveira",
+        "idade": 22,
+        "curso": "Medicina"
+      }
+    ],
+    "livros": [
+      {
+        "id": 1,
+        "titulo": "Introdução à Engenharia",
+        "autor": "Carlos Mendes",
+        "ano": 2020
+      },
+      {
+        "id": 2,
+        "titulo": "Anatomia Humana",
+        "autor": "Ana Paula",
+        "ano": 2019
+      }
+    ],
+    "emprestimos": [
+      {
+        "id": 1,
+        "alunoId": 1,
+        "livroId": 1,
+        "dataEmprestimo": "2024-11-20",
+        "dataDevolucao": "2024-12-01"
+      },
+      {
+        "id": 2,
+        "alunoId": 2,
+        "livroId": 2,
+        "dataEmprestimo": "2024-11-15",
+        "dataDevolucao": "2024-11-25"
+      }
+    ]
+  }
+  
