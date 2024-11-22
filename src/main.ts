@@ -6,10 +6,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()  
-    .setTitle('Portal Transparência')
-    .setDescription('API documentada para portal transparencia')
+    .setTitle('Livraria')
+    .setDescription('API documentada para trabalho do senai de livraria')
     .setVersion('1.0')
-    .addTag('api-portal')
+    .addTag('api-library')
     .build()
     const document = SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('api', app, document);

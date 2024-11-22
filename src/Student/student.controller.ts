@@ -3,6 +3,7 @@ import { StudentService } from "./student.service";
 import { QueryDTO } from "src/Types/DefaultDTO";
 import { ApiTags } from "@nestjs/swagger";
 import { Student } from "schemas/student.entity";
+
 @ApiTags("Alunos")
 @Controller("student")
 export class StudentController 
