@@ -16,7 +16,7 @@ export class BookService
             return data;
         } catch (err : unknown)
         {
-            
+            return { error : err, statusCode : 500}
         }
     }
 
@@ -34,5 +34,12 @@ export class BookService
             await fetch("");
         } catch (err : unknown) 
         {}
+    }
+
+    async updateBook (book : Book) 
+    {
+        //rota para atualizacao de livros
+        const response = await fetch("")
+        return response;
     }
 }

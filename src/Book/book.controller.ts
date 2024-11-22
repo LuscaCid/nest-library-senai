@@ -3,8 +3,9 @@ import { BookService } from "./book.service";
 import { QueryDTO } from "src/Types/DefaultDTO";
 import { Student } from "schemas/student.entity";
 import { Book } from "schemas/book.entity";
+import { ApiTags } from "@nestjs/swagger";
 
-
+@ApiTags("Livros")
 @Controller("book")
 export class BookController 
 {
