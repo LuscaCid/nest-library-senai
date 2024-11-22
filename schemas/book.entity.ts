@@ -1,7 +1,7 @@
 export class Book 
 {
-    id : number;
-    titulo : string;
+    id_livro : number;
+    nome : string;
     autor : string;
-    ano : number
+    isbn : number
 }

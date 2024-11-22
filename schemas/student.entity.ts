@@ -1,7 +1,8 @@
 export class Student 
 {
-    id : number;
+    id_aluno : number;
     nome : string;
-    idade : number;
-    curso : string   
+    telefone : number;
+    email : string;
+    data_nascimento : Date;  
 }

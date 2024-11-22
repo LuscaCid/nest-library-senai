@@ -9,11 +9,30 @@ export class BookService
 
 
     async getBooks (query : QueryDTO) 
-    {}
+    {
+        try 
+        {
+            const data = await fetch("");
+            return data;
+        } catch (err : unknown)
+        {
+            
+        }
+    }
 
     async addOne (book : Book) 
     {
-        //rota do jsonserver
+        //rota do jsonserver para adicao de livro
         const response = await fetch("");
+    }
+
+    async deleteBook (bookId : number) 
+    {
+        try 
+        {
+            //rota para delecao de livro
+            await fetch("");
+        } catch (err : unknown) 
+        {}
     }
 }
