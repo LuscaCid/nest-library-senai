@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post, Query } from "@nestjs/common";
+import { Body, Controller, Get, Post, Put, Query } from "@nestjs/common";
 import { BookService } from "./book.service";
 import { QueryDTO } from "src/Types/DefaultDTO";
 import { Student } from "schemas/student.entity";
@@ -27,5 +27,12 @@ export class BookController
             response,
             message:  "Livro criado com sucesso"
         }
+    }
+
+    @Put("/")
+    async updateBook (@Body() newBookData : Book) 
+    {
+        const response = await this.bookService.updateBook(newBookData);
+        return response;
     }
 }
