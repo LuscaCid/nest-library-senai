@@ -1,18 +1,17 @@
 import { Injectable } from "@nestjs/common";
 import { Book } from "schemas/book.entity";
+import { api } from "src/ServerConfig/api";
 import { QueryDTO } from "src/Types/DefaultDTO";
 
 @Injectable()
 export class BookService 
 {
     constructor () {}
-
-
     async getBooks (query : QueryDTO) 
     {
         try 
         {
-            const data = await fetch("");
+            const data = await api.get("");
             return data;
         } catch (err : unknown)
         {
@@ -23,7 +22,7 @@ export class BookService
     async addOne (book : Book) 
     {
         //rota do jsonserver para adicao de livro
-        const response = await fetch("");
+        const response = await api.post("");
     }
 
     async deleteBook (bookId : number) 
@@ -31,7 +30,7 @@ export class BookService
         try 
         {
             //rota para delecao de livro
-            await fetch("");
+            await api.delete("");
         } catch (err : unknown) 
         {}
     }
@@ -39,7 +38,7 @@ export class BookService
     async updateBook (book : Book) 
     {
         //rota para atualizacao de livros
-        const response = await fetch("")
+        const response = await api.put("")
         return response;
     }
 }

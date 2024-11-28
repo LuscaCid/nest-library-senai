@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Loan } from "schemas/Loan.entity";
+import { api } from "src/ServerConfig/api";
 import { QueryDTO } from "src/Types/DefaultDTO";
 
 @Injectable()
@@ -8,13 +9,13 @@ export class LoanService
     async getLoans (queryDTO : QueryDTO) 
     {
         //rota para resgatar os emprestimos
-        const loanData = await fetch("");
+        const loanData = await api.get("");
     }
 
     async getLoanByStudentId (studentId : number) 
     {
         //retorno de informacao mais refinado. retornar os emprestimos do aluno
-        const data = await fetch("");
+        const data = await api.post("");
         return data;
     }
 
@@ -25,7 +26,7 @@ export class LoanService
      */
     async updateLoan (newLoanData : Loan) 
     {
-        const updadted = await fetch("");
+        const updadted = await api.put("");
         return updadted 
     }
 
@@ -36,13 +37,13 @@ export class LoanService
     async addLoan (loan : Loan) 
     {
         //rota para adiicionar um emprestimo
-        const data = await fetch("");
+        const data = await api.post("");
     }
 
     async deleteLoan (loanId : number) 
     {
         //rota para delecao de emprestimo
-        const data = await fetch("");
+        const data = await api.delete("");
         return data;
     }
     
